@@ -15,12 +15,14 @@ export const createUser = async (user) => {
         assertErrors(response);
         return response.data.createUser;
     } catch (e) {
+      /*
         Analytics.record({
             name: 'CreateUserError',
             attributes: {
                 error: e.message
             }
         })
+        */
     }
 }
 

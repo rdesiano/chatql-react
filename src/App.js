@@ -19,9 +19,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    Analytics.startSession();
+//    Analytics.startSession();
     window.addEventListener('beforeunload', () => {
-      Analytics.stopSession();
+//      Analytics.stopSession();
     })
     Auth.currentAuthenticatedUser().then(user => {
       this.updateCurrentUser(user)
