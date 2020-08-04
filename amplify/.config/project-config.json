@@ -12,5 +12,6 @@
     },
     "providers": [
         "awscloudformation"
-    ]
+    ],
+    "version": "3.0"
 }
