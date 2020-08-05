@@ -6,5 +6,22 @@
 			"dependsOn": [],
 			"customAuth": false
 		}
+	},
+	"api": {
+		"chatqlimchat": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"defaultAuthentication": {
+						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
+						"userPoolConfig": {
+							"userPoolId": "authchatqlim5a6952b0"
+						}
+					},
+					"additionalAuthenticationProviders": []
+				}
+			}
+		}
 	}
 }
