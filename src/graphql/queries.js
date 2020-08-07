@@ -1,3 +1,13 @@
+export const imUserList = `
+    query imUserList {
+        imUserList {
+            personId
+            username
+            tenantId
+            imRole
+    }
+`
+
 export const ListUsers = `
     query ListUsers {
         listUsers {
@@ -57,3 +67,4 @@ export const GetConvo = `
     }
   }
 `
+

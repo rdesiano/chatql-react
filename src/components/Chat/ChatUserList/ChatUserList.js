@@ -16,6 +16,31 @@ class ChatUserList extends Component {
                 <div className="section-header">
                     <h6 className='mb-0'><i className="ion-ios-person" data-pack="default" data-tags="talk" /> Users</h6>
                 </div>
+                <div className="section-header">
+                    <h6 className='mb-0'><i className="ion-ios-person" data-pack="default" data-tags="talk" /> ImUserList - 
+                        <Connect query={graphqlOperation(queries.imUserList)}>
+                            {({ data, loading, error }) => {
+                                const { imUserList } = data || { }
+                                if (error) return (" Error: " + {error});
+                                //return ("Loading: " + {loading} + "; imUserList: " + {imUserList} + ";");
+                                let imUser;
+                                try {
+                                    imUser = imUserList;
+                                } catch (e) {
+                                  return("Caught Error: " + {e})
+                                }
+                                if (loading) return (" Loading...");
+                                if (!imUser) return (" No IM Users");
+                                return (
+                                    <a href={imUser.tenantId} className="list-group-item list-group-item-action p-3 border-0">
+                                      {imUser.username} - {imUser.personId}
+                                    </a>
+                                );
+                            }}
+
+                        </Connect>
+                    </h6>
+                </div>
                 <div className="user-list">
                     <div className="list-group">
                         <Connect
