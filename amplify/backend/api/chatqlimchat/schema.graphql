@@ -59,3 +59,16 @@ type Subscription {
   onCreateMessage(messageConversationId: ID!): Message
     @aws_subscribe(mutations: ["createMessage"])
 }
+
+type Query {
+  imUserList: ImUser @function(name: "ChatQLIMUsersFunction-${env}")
+}
+
+type ImUser {
+  personId: String
+  username: String
+  tenantId: String 
+  imRole: ImRole
+}
+
+enum ImRole { admin user guest }

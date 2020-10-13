@@ -5,6 +5,7 @@ export const imUserList = `
             username
             tenantId
             imRole
+        }
     }
 `
 

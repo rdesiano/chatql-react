@@ -23,5 +23,13 @@
 				}
 			}
 		}
+	},
+	"function": {
+		"ChatQLIMUsersFunction": {
+			"build": true,
+			"providerPlugin": "awscloudformation",
+			"service": "Lambda",
+			"dependsOn": []
+		}
 	}
 }

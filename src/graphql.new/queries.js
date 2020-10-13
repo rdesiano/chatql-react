@@ -1,6 +1,16 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const imUserList = /* GraphQL */ `
+  query ImUserList {
+    imUserList {
+      personId
+      username
+      tenantId
+      imRole
+    }
+  }
+`;
 export const getUser = /* GraphQL */ `
   query GetUser($id: ID!) {
     getUser(id: $id) {
